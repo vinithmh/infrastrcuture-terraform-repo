@@ -3,9 +3,10 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      terraform: 1.6 # Use the desired version of Terraform
+      terraform: 0.14 # Use a supported version of Terraform
   pre_build:
     commands:
+    - pwd
     - terraform init
   build:
     commands:
