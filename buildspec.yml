@@ -12,7 +12,6 @@ phases:
   pre_build:
     commands:
     # (Optional) Initialize Terraform and set backend
-    - cd path/to/terraform/project
     - terraform init -migrate-state
   build:
     commands:
