@@ -9,10 +9,10 @@ phases:
     - wget https://releases.hashicorp.com/terraform/0.15.5/terraform_0.15.5_linux_amd64.zip
     - unzip terraform_0.15.5_linux_amd64.zip
     - mv terraform /usr/local/bin/
-  pre_build:
+  build:
     commands:
-    # (Optional) Initialize Terraform and set backend
-    - terraform init
+    # Run Terraform commands
+    - terraform plan -out=tfplan
   post_build:
     commands:
     # (Optional) Perform any post-deployment tasks
