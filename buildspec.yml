@@ -12,7 +12,7 @@ phases:
   pre_build:
     commands:
     # (Optional) Initialize Terraform and set backend
-    - pwd
+    - terraform init
   post_build:
     commands:
     # (Optional) Perform any post-deployment tasks
